@@ -1,0 +1,19 @@
+---
+title: "Deep Learning in R: Chapter 3"
+output: html_notebook
+---
+
+Quick work through of chapter 3 deep learning in R's excercises.
+
+```{r Install and set up kera}
+#install.packages("keras")
+library(keras)
+#install_keras(tensorflow = "gpu")
+```
+
+## Classifying movie reviews: binary classification
+
+```{r get-data}
+imdb <- dataset_imdb(num_words = 10000)
+c(c(train_data, train_labels), c(test_data, test_labels)) %<-% imdb
+```
